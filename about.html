@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Symbols | Printing & Advertising</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f8f9fa;
+      }
+
+      /* Navigation */
+      nav {
+        background: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #4caf50;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 60vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 80px;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      /* About Content */
+      .about-content {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .story-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 6rem;
+        align-items: center;
+      }
+
+      .story-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #1a1a1a;
+      }
+
+      .story-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+
+      .story-image {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .story-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      /* Values Section */
+      .values-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 80px 20px;
+        margin: 80px 0;
+        border-radius: 30px;
+        text-align: center;
+      }
+
+      .values-section h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .value-item {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+
+      .value-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Team Section */
+      .team-section {
+        text-align: center;
+        margin-bottom: 6rem;
+      }
+
+      .team-section h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #1a1a1a;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .team-member {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .team-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .team-member h3 {
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+
+      .team-member .role {
+        color: #4caf50;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .team-member p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Statistics Section */
+      .stats-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        position: relative;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .stats-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(26, 26, 26, 0.8);
+      }
+
+      .stats-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+
+      .stats-content h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .stat-item {
+        padding: 2rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #4caf50;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+
+      /* Footer */
+      footer {
+        background: #1a1a1a;
+        color: #eee;
+        text-align: center;
+        padding: 3rem 2rem;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .story-section {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .story-text h2,
+        .values-section h2,
+        .team-section h2,
+        .stats-content h2 {
+          font-size: 2rem;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">Symbols</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>About Symbols</h1>
+        <p>Crafting Excellence in Printing & Advertising Since 2010</p>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+      <!-- Story Section -->
+      <div class="story-section">
+        <div class="story-text">
+          <h2>Our Story</h2>
+          <p>
+            Founded in 2010, Symbols has been at the forefront of the printing
+            and advertising industry, delivering exceptional quality and
+            innovative solutions to businesses of all sizes.
+          </p>
+          <p>
+            What started as a small local print shop has evolved into a
+            comprehensive printing and advertising solutions provider, serving
+            clients across diverse industries with cutting-edge technology and
+            unmatched expertise.
+          </p>
+          <p>
+            Our commitment to excellence, attention to detail, and
+            customer-centric approach has made us the trusted partner for
+            thousands of businesses looking to make their mark in the market.
+          </p>
+        </div>
+        <div class="story-image">
+          <div
+            style="
+              width: 100%;
+              height: 400px;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-size: 1.5rem;
+              text-align: center;
+            "
+          >
+            <div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">🏢</div>
+              <div>Our State-of-the-Art Facility</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <div class="team-section">
+        <h2>Our Expert Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div
+              class="team-avatar"
+              style="
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+              "
+            >
+              JA
+            </div>
+            <h3>John Anderson</h3>
+            <div class="role">Chief Executive Officer</div>
+            <p>
+              Leading Symbols with 15+ years of industry experience and a vision
+              for innovation.
+            </p>
+          </div>
+          <div class="team-member">
+            <div
+              class="team-avatar"
+              style="
+                background: linear-gradient(135deg, #4caf50, #45a049);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+              "
+            >
+              SM
+            </div>
+            <h3>Sarah Mitchell</h3>
+            <div class="role">Creative Director</div>
+            <p>
+              Bringing creative excellence to every project with award-winning
+              design expertise.
+            </p>
+          </div>
+          <div class="team-member">
+            <div
+              class="team-avatar"
+              style="
+                background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+              "
+            >
+              MC
+            </div>
+            <h3>Michael Chen</h3>
+            <div class="role">Production Manager</div>
+            <p>
+              Ensuring quality and timely delivery through efficient production
+              management.
+            </p>
+          </div>
+          <div class="team-member">
+            <div
+              class="team-avatar"
+              style="
+                background: linear-gradient(135deg, #ffa726, #ff9800);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+              "
+            >
+              ER
+            </div>
+            <h3>Emily Rodriguez</h3>
+            <div class="role">Customer Success Manager</div>
+            <p>
+              Dedicated to providing exceptional customer service and building
+              lasting relationships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+      <h2>Our Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <h3>Quality First</h3>
+          <p>
+            We never compromise on quality, using only the finest materials and
+            latest technology.
+          </p>
+        </div>
+        <div class="value-item">
+          <h3>Innovation</h3>
+          <p>
+            Constantly evolving and adopting new technologies to serve our
+            clients better.
+          </p>
+        </div>
+        <div class="value-item">
+          <h3>Integrity</h3>
+          <p>
+            Building trust through transparent communication and honest business
+            practices.
+          </p>
+        </div>
+        <div class="value-item">
+          <h3>Customer Focus</h3>
+          <p>
+            Every decision we make is centered around our customers' success and
+            satisfaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="stats-content">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">5000+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50,000+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Customer Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Contact us at:
+        <a href="mailto:you@symbolsadvertisement.store"
+          ><strong>you@symbolsadvertisement.store</strong></a
+        >
+      </p>
+      <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+      <p>© 2025 Symbols. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
